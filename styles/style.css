@@ -6,6 +6,7 @@
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    background-color: var(--main-bg-color);
     font-family: var(--font, monospace);
     font-size: var(--font-size);
     font-weight: 400;
@@ -14,7 +15,7 @@
 }
 
 .header {
-    min-block-size: 100vh;
+    block-size: 100vh;
     padding: var(--header-pudding);
     display: grid;
     position: relative;
@@ -30,6 +31,7 @@
 }
 
 .header__theme-menu-button {
+    cursor: pointer;
     padding: 0 13px;   /**/
     color: var(--btn-color);
     text-align: center;
@@ -53,18 +55,18 @@
 }
 
 .header__theme-menu-button:hover {
-    border: 1px solid rgba(255, 0, 112, 0.40);
+    border: 1px solid var(--nav-hover-color);
     cursor: pointer;
 }
 
-/*РЕС*/
+/*RЕС*/
 
 .decor__element {
     position: absolute;
     top: 0;
     right: 0;
     content: "";
-    display: flex;
+    display: var(--display-rec);
     align-items: center;
     gap: 10px;
     color: var(--btn-color);
@@ -81,8 +83,8 @@
     block-size: 9px;
     border-radius: 50%;
     background-color: var(--accent-color);
-    fill: var(--accent-color);
-    filter: drop-shadow(0px 0px 4px var(--accent-color));
+    /*fill: var(--accent-color); fill используйте для svg изображений. Для обычных блоков или псевдоэлементов для фона используется background-color , поэтому в данном случае fill ничего не делает и строку можно удалить*/
+    filter: drop-shadow(0px 0px 4px 2px var(--accent-color));
 }
 
 /*angles styles*/
@@ -115,7 +117,7 @@
 /*titles*/
 
 .header__title {
-    margin-left: var(--header-pudding);
+    margin-left: calc(-1*var(--header-pudding));
     text-shadow: 4px 4px 0 var(--accent-color);
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     color: var(--title-color);
@@ -134,7 +136,6 @@
 
 .header__text { /*red title bg*/
     max-inline-size: 491px;
-    max-block-size: 71px;
     justify-self: end;
     align-self: center;
 }
@@ -327,10 +328,6 @@
         max-block-size: 117px;
     }
 
-    .header__title { /*no focus*/
-        margin-left: -36px;
-    }
-
     .question__section_why {
 
         grid-template-columns: 33% 67%;
@@ -367,6 +364,7 @@
 @media (max-width: 375px) {
     .header {
         padding: 10px;
+        min-height: 668px;
     }
 
     .header__title { /*no focus*/
