@@ -213,8 +213,10 @@
     max-inline-size: 315px;
 }
 
-.question__section-answer-title-causes {
-    margin-block-end: 10px;
+.question__section-answer-causes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 /*advice-section*/
@@ -235,8 +237,10 @@
     gap: 20px;
 }
 
-.question__section-answer-text-advice {
-    padding-block-start: 10px;
+.question__section-answer-advice-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 /*gallery*/
