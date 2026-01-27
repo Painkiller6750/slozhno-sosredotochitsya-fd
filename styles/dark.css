@@ -1,9 +1,5 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
 
+/*Initially I have dark theme as a default and use prefer light in light.css to set light preferred styles there */
 :root.theme-dark { /*js adds modifier theme-dark*/
     --title-color: #DB00FF;
     --text-color: #F1B2CE;
@@ -15,12 +11,3 @@
     --nav-hover-color: rgb(255 0 112 / 0.4);
     --display-rec: flex;
 }
-/*
-.theme-dark .decor__element {
-    display: flex;
-}
-*/
-/*.theme-dark .header__theme-menu-button:hover {
-    border: 1px solid rgba(255, 0, 112, 0.40);
-}
-*/
