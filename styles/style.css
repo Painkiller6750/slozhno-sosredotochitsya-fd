@@ -16,6 +16,7 @@
 
 .header {
     block-size: 100vh;
+    min-block-size: 668px;
     padding: var(--header-pudding);
     display: grid;
     position: relative;
@@ -84,7 +85,7 @@
     border-radius: 50%;
     background-color: var(--accent-color);
     /*fill: var(--accent-color); fill используйте для svg изображений. Для обычных блоков или псевдоэлементов для фона используется background-color , поэтому в данном случае fill ничего не делает и строку можно удалить*/
-    filter: drop-shadow(0px 0px 4px 2px var(--accent-color));
+    box-shadow: 0px 0px 4px 2px var(--accent-color);
 }
 
 /*angles styles*/
@@ -301,7 +302,7 @@
 }
 
 .footer__title {
-    text-shadow: 4px 4px 0 var(--accent-color);
+    text-shadow: 2px 2px 0 var(--accent-color);
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     color: var(--title-color);
     font-weight: 700;
@@ -329,7 +330,6 @@
 
     .header__text {
         max-inline-size: 364px;  /*364px red bg above*/
-        max-block-size: 117px;
     }
 
     .question__section_why {
@@ -378,7 +378,6 @@
 
     .header__text {
         max-inline-size: 355px;
-        max-block-size: 117px;
     }
 
     .question__section_why {
